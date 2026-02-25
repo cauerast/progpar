@@ -1,5 +1,4 @@
 package ClasseObjeto;
-import ClasseObjeto.Carro;
 
 public class TestaCarro {
     public static void main(String[] args){
