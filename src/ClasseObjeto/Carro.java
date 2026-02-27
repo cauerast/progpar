@@ -1,6 +1,6 @@
 package ClasseObjeto;
 
-public class Carro{
+public class Carro {
 
     // vars or props or actributs
     public String marca, modelo; // String is type class
