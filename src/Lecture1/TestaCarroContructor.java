@@ -1,4 +1,4 @@
-package ClasseObjeto;
+package Lecture1;
 
 public class TestaCarroContructor {
     public static void main(String[] args){
