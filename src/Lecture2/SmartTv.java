@@ -6,8 +6,8 @@ public class SmartTv {
 
     public SmartTv(){}
     public SmartTv(String marca, String modelo, int volume){
-        this.marca = marca;
-        this.modelo = modelo;
+        this.setMarca(marca);
+        this.setModelo(modelo);
         this.setVolume(volume); //
     }
 
