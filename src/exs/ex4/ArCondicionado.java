@@ -5,8 +5,8 @@ public class ArCondicionado {
     private int temperature;
     private boolean on;
 
-    private ArCondicionado(){};
-    private ArCondicionado(String label, String model, int temperature, boolean on){
+    public ArCondicionado(){};
+    public ArCondicionado(String label, String model, int temperature, boolean on){
         setLabel(label);
         setModel(model);
         setTemperature(temperature);
