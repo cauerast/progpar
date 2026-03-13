@@ -63,6 +63,7 @@ public class Order {
         for (OrderItem orderItem : this.orderItems) {
             return orderItem.getQtd() * orderItem.getProduct().getPrice();
         }
+        return 0;
     }
 
     // or
