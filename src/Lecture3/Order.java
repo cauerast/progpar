@@ -72,5 +72,5 @@ public class Order {
     //        for(int i = 0; i < this.orderItems.size(); i++){
     //            return this.orderItems.get(i).getQtd() * this.orderItems.get(i).getProduct().getPrice();
     //        }
-    //    }
+    // }
 }
