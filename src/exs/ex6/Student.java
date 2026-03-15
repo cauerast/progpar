@@ -48,11 +48,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", register=" + register +
-                ", major='" + major + '\'' +
-                '}';
+        return "\nStudent -> " +
+                "\n\tid: " + id +
+                "\n\tname: " + name +
+                "\n\tregister: " + register +
+                "\n\tmajor: " + major;
     }
 }

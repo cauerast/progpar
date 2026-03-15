@@ -40,12 +40,17 @@ public class Test {
         this.questions = questions;
     }
 
-
-
     public void addQuestion(int num, String stat, float val){
         Question newQuestion = new Question(num, stat, val);
         this.questions.add(newQuestion);
         System.out.println("Question has been added!");
     }
 
+    @Override
+    public String toString() {
+        return "\nTest -> " +
+                "\n\tid: " + id +
+                "\n\tname: " + name +
+                "\n\tquestions: " + questions;
+    }
 }

@@ -38,10 +38,9 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Question{" +
-                "number=" + number +
-                ", statement='" + statement + '\'' +
-                ", value=" + value +
-                '}';
+        return "\nQuestion -> " +
+                "\n\tnumber: " + this.number +
+                "\n\tstatement: " + this.statement +
+                "\n\tvalue: " + this.value;
     }
 }

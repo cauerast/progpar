@@ -13,7 +13,11 @@ public class TestAcademic {
         dsp2.enrollStudent(std2); // aggregation ( use the created obj )
         dsp2.createTest(1864, "Semester Test"); // composition ( create the obj )
 
-        dsp2.getTests().get(1).
+        dsp2.getTests().get(0).addQuestion(1, "q1", 3.33f);
+        dsp2.getTests().get(0).addQuestion(1, "q2", 3.33f);
+        dsp2.getTests().get(0).addQuestion(1, "q3", 3.33f);
+
+        System.out.println(dsp2);
 
     }
 }

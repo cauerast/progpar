@@ -69,7 +69,19 @@ public class Discipline {
         return this.tests;
     }
 
+    @Override
+    public String toString() {
+        return "\nDisciplines -> " +
+                "\n\tid: " + this.id +
+                "\n\tname: " + this.name +
+                "\n\tteacher: " + this.teacher +
+                "\n\tstudents: " + this.students +
+                "\n\ttests: " + this.tests;
+    }
+
     public void setTests(ArrayList<Test> tests) {
         this.tests = tests;
+
+
     }
 }
