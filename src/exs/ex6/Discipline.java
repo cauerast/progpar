@@ -21,12 +21,14 @@ public class Discipline {
         this.tests = new ArrayList<>();
     }
 
+    // agregation - pass the obj that already exist
     public void enrollStudent(Student student){
         // don't need to create a student, that already exists, just pass by parameter
         students.add(student);
         System.out.println("student enrolled!");
     }
 
+    // composition - create the obj
     public void createTest(int id, String name){
         // create test, because it not already exists
         Test test = new Test(id, name);

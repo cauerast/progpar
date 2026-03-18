@@ -40,6 +40,7 @@ public class Test {
         this.questions = questions;
     }
 
+    // composition - create the obj
     public void addQuestion(int num, String stat, float val){
         Question newQuestion = new Question(num, stat, val);
         this.questions.add(newQuestion);

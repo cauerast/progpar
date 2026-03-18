@@ -7,6 +7,8 @@ public class Student {
     private String major;
 
     public Student(){}
+    //  nao precisava de getters and setters aqui, pois nao temos ifs e elses nos sets,
+    //  ou seja, nao temos restricoes para colocar set e get.
     public Student(int id, String name, int register, String major) {
         setId(id);
         setName(name);
