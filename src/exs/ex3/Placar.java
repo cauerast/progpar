@@ -16,10 +16,13 @@ public class Placar {
     }
 
     public void registrarPontos(String time, int tipo){
-        if(time.equals("casa")){
+        if(time.equalsIgnoreCase("casa")){
             this.pontosCasa += tipo;
-        } else if(time.equals("visitante")){
+        } else if(time.equalsIgnoreCase("visitante")){
             this.pontosVisitante += tipo;
+            System.out.println("Time " + time + " pontuou " + tipo + " pontos");
+        } else {
+            System.out.println("error");
         }
     }
 
