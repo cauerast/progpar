@@ -60,10 +60,11 @@ public class Order {
     }
 
     public float OrderTotalCalculator(){
+        float aux = 0;
         for (OrderItem orderItem : this.orderItems) {
-            return orderItem.getQtd() * orderItem.getProduct().getPrice();
+            aux += orderItem.getQtd() * orderItem.getProduct().getPrice();
         }
-        return 0;
+        return aux;
     }
 
     // or
