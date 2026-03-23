@@ -37,8 +37,9 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer ->" +
-                "id: " + this.id +
-                "brand: " + this.brand;
+        return "\nComputer ->" +
+                "\n\tid: " + this.id +
+                "\n\tbrand: " + this.brand +
+                "\n\tcpu: " + this.cpu;
     }
 }

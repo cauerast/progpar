@@ -37,10 +37,9 @@ public class CPU {
 
     @Override
     public String toString() {
-        return "CPU{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", frequency=" + frequency +
-                '}';
+        return "\nCPU ->" +
+                "\n\tbrand: " + this.brand +
+                "\n\tmodel: " + this.model +
+                "\n\tfrequency: " + this.frequency;
     }
 }
