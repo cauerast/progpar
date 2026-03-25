@@ -39,8 +39,8 @@ public class Developer {
     @Override
     public String toString() {
         return "\nDeveloper ->" +
-                "\n\tname: " + this.name + '\'' +
-                "\n\tlanguage: " + this.language + '\'' +
+                "\n\tname: " + this.name +
+                "\n\tlanguage: " + this.language +
                 "\n\tsalary: " + this.salary;
     }
 }
