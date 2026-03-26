@@ -36,6 +36,13 @@ public class Developer {
         this.salary = salary;
     }
 
+    public void code(){
+        System.out.println("dev codes");
+    }
+    public float calculateBonus(){
+        return this.salary * 0.05f;
+    }
+
     @Override
     public String toString() {
         return "\nDeveloper ->" +
