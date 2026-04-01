@@ -1,6 +1,6 @@
 package exs.ex15;
 
-public class Vehicle {
+public abstract class Vehicle {
     protected String brand;
     protected String model;
     protected float velocity;
@@ -36,13 +36,9 @@ public class Vehicle {
         this.velocity = velocity;
     }
 
-    public void move(){
-        System.out.println("The vehicle is moving");
-    }
+    public abstract void move();
 
-    public void fuel(){
-        System.out.println("Vehicle is fueling");
-    }
+    public abstract void fuel();
     @Override
     public String toString() {
         return "Vehicle ->" +
