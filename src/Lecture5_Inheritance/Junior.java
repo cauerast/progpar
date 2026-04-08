@@ -1,4 +1,4 @@
-package Lecture5;
+package Lecture5_Inheritance;
 
 public class Junior extends Developer{
     private String mentor;
