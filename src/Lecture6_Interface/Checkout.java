@@ -11,10 +11,5 @@ public class Checkout {
         pix.authorize(500);
         pix.showPaymentInfo();
 
-        int []a = {1, 2, 4, 5, 6};
-
-        System.out.println(a);
-
-
     }
 }
