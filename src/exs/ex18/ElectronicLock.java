@@ -1,5 +1,7 @@
 package exs.ex18;
 
+import java.util.Objects;
+
 public class ElectronicLock implements Auth, Device{
 
     private String pass;
@@ -18,8 +20,12 @@ public class ElectronicLock implements Auth, Device{
     }
 
     @Override
-    public void authenticate() {
-        if()
+    public void authenticate(String pass) {
+        if(Objects.equals(pass, "123")){
+            on();
+        } else {
+            off();
+        }
     }
 
     @Override
