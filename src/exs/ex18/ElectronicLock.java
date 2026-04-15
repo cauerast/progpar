@@ -5,6 +5,7 @@ import java.util.Objects;
 public class ElectronicLock implements Auth, Device{
 
     private String pass;
+    private boolean locked = true;
 
     public ElectronicLock(){};
     public ElectronicLock(String pass){
@@ -30,11 +31,13 @@ public class ElectronicLock implements Auth, Device{
 
     @Override
     public void on() {
+        this.locked = false;
         System.out.println("Door opened!");
     }
 
     @Override
     public void off() {
+        this.locked = true;
         System.out.println("Door locked");
     }
 
