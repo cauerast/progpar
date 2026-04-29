@@ -10,7 +10,7 @@ public class testDeveloper {
     }
     public static void main(String[] args){
         Junior j1 = new Junior("junin", "java", 4000, "seninha");
-        Analyst a1 = new Analyst("pleninho", "java", 4000, 5);
+        Analyst a1 = new Analyst("pleninho", "java", 6000, 5);
         Senior s1 = new Senior("seninha", "java", 9000, 3000);
 
         show(j1);
