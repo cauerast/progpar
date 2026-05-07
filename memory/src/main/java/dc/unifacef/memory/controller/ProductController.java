@@ -33,6 +33,7 @@ public class ProductController {
         URI uri = URI.create("/product/" + newProduct.getID());
         return ResponseEntity.created(uri).body(newProduct);
 
+
     }
 
 }
