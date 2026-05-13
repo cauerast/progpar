@@ -15,7 +15,7 @@ public class ProductController {
     // GET requisition
 
     // Dependence injection
-    // Call a methos without an instance
+    // Call a method without an instance
     @Autowired
     ProductService service;
 
@@ -33,7 +33,5 @@ public class ProductController {
         URI uri = URI.create("/product/" + newProduct.getID());
         return ResponseEntity.created(uri).body(newProduct);
 
-
     }
-
 }
