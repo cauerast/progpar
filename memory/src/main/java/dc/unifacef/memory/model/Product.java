@@ -6,7 +6,7 @@ public class Product {
     private Double preco;
     private Integer qtd;
 
-    public long getID() {
+    public Long getID() {
         return this.ID;
     }
 

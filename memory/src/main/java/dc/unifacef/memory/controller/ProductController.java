@@ -32,6 +32,24 @@ public class ProductController {
 
         URI uri = URI.create("/product/" + newProduct.getID());
         return ResponseEntity.created(uri).body(newProduct);
+    }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> remove(@PathVariable Long id){
+        if(service.remove(id)){
+            return ResponseEntity.noContent().build(); // success 204
+        } else {
+            return ResponseEntity.notFound().build(); // client error 404
+        }
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Product> patch(@PathVariable Long id, @RequestBody Product newProduct){
+        Product response = service.patch(id, newProduct);
+        if(response != null){
+            return ResponseEntity.ok(response);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

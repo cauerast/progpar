@@ -22,4 +22,22 @@ public class ProductService {
         this.products.add(product);
         return product;
     }
+
+    // remove a product by your id
+    public boolean remove(Long id){
+        return this.products.removeIf(p -> p.getID().equals(id));
+    }
+
+    // patch the product by id
+    public Product patch(Long id, Product newProduct){
+        newProduct.setID(id);
+        for(int i = 0; i < this.products.size(); i++){
+            if(this.products.get(i).getID().equals(id)){
+                // got it
+                this.products.set(i, newProduct);
+                return newProduct;
+            }
+        }
+        return null; // product not found
+    }
 }
