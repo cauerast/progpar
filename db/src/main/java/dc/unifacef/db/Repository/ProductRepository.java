@@ -4,8 +4,8 @@ import dc.unifacef.db.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    // that interface will contain a CRUD;
-    // save(), findAll(), findById(), remove(), existsById(), count().
-    // essa classe é a mais perto ao banco de dados do sistema
-    // o hibernate transforma essas informacoes em comandos para o banco de dados
+    // This interface will contain a CRUD;
+    // save(), findAll(), findById(), deleteById(), existsById(), count().
+    // This class is the closest to the system's database
+    // Hibernate transforms this information into database commands
 }
