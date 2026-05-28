@@ -40,18 +40,17 @@ public class ProductController {
         if(newProduct != null){
             URI uri = URI.create("/product/" + newProduct.getId());
             return ResponseEntity.created(uri).body(newProduct);
-        } else {
-            return ResponseEntity.noContent().build();
         }
+        return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> remove(@PathVariable Long id){
         if(service.remove(id)){
             return ResponseEntity.noContent().build(); // 204
-        } else {
-            return ResponseEntity.notFound().build(); // 404
         }
+        return ResponseEntity.notFound().build(); // 404
+
     }
 
     @PatchMapping("/{id}")
@@ -59,10 +58,8 @@ public class ProductController {
         Product response = service.patch(id, newProd);
         if(response != null){
             return ResponseEntity.ok(response);
-        } else {
-            return ResponseEntity.notFound().build();
         }
+        return ResponseEntity.notFound().build();
+
     }
-
-
 }
