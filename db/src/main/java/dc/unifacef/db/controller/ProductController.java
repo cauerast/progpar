@@ -2,11 +2,13 @@ package dc.unifacef.db.controller;
 
 import dc.unifacef.db.Service.ProductService;
 import dc.unifacef.db.model.Product;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 @RestController // recebe as requisicoes
 @RequestMapping("/product") // recebe somente as requisicoes de /products
@@ -24,11 +26,23 @@ public class ProductController {
         return ResponseEntity.ok(service.list());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Product>> findById(@PathVariable Long id){
+        Optional<Product> prod = service.findById(id);
+        if(prod.isEmpty()){
+            return ResponseEntity.notFound().build(); // 404
+        }
+        return ResponseEntity.ok(prod); // 200
+    }
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody Product product){
         Product newProduct = service.save(product);
-        URI uri = URI.create("/product/" + newProduct.getId());
-        return ResponseEntity.created(uri).body(newProduct);
+        if(newProduct != null){
+            URI uri = URI.create("/product/" + newProduct.getId());
+            return ResponseEntity.created(uri).body(newProduct);
+        } else {
+            return ResponseEntity.noContent().build();
+        }
     }
 
     @DeleteMapping("/{id}")
@@ -49,4 +63,6 @@ public class ProductController {
             return ResponseEntity.notFound().build();
         }
     }
+
+
 }
